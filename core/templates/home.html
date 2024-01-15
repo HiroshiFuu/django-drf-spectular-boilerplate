@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+<div class="row">
+	<ul>
+		{% for item in verions %}
+		<li><a href="api/{{ item }}/schema/swagger-ui/">Swagger UI ({{ item }})</a></li>
+		{% endfor %}
+	</ul>
+</div>
+
+{% endblock content %}

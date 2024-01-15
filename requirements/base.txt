@@ -1,0 +1,62 @@
+# Bleeding edge Django
+Django>=4.2,<4.3
+
+# ======== Django Debug ==========
+django-debug-toolbar
+django-cors-headers
+
+# Django-Extensions
+django-extensions
+Werkzeug==2.0.0
+pyOpenSSL
+
+# Django Auth
+argon2-cffi
+dj-rest-auth
+
+# Forms
+django-crispy-forms
+crispy-bootstrap4
+
+# PostgreSQL adapter
+psycopg[binary,pool]
+
+# RESTful
+djangorestframework
+drf-spectacular
+
+# Configuration
+django-environ
+
+# Django Admin Style
+django-jazzmin
+
+# Django admin 3rd party tools
+# django-import-export
+# django-object-actions
+# django-admin-sortable2
+# django-sortedm2m
+# django4-inline-actions
+
+# JSON
+django-validated-jsonfield
+django-json-widget
+
+# Web app to serve its own static files
+whitenoise
+
+# Sentry SDK
+sentry-sdk
+
+# Time zones support
+pytz
+
+# Retrieve client's IP address
+django-ipware
+ipaddress
+
+# Auto-detect user's timezone
+django-tz-detect
+
+# My awesome package
+django-onetimelink

@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  backend:
+    build: .
+    command: python3 manage.py runserver_plus
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${PWD}/logs:/app/logs

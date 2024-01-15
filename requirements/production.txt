@@ -1,0 +1,8 @@
+# Python WSGI HTTP Server
+gunicorn
+
+# Coroutine -based Python networking library
+gevent
+
+# Compile Python source files
+cython
