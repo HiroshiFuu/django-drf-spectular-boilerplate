@@ -86,19 +86,19 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # ------------------------------------------------------------------------------
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "Animal Track Admin Portal",
+    "site_title": "MyTemplate Admin Portal",
 
     # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Animal Track",
+    "site_header": "MyTemplate",
 
     # Title on the brand (19 chars max) (defaults to current_admin_site.site_header if absent or None)
     "site_brand": "Admin Portal",
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to Animal Track Admin Portal",
+    "welcome_sign": "Welcome to MyTemplate Admin Portal",
 
     # Copyright on the footer
-    "copyright": "HPE Innovation Centre",
+    "copyright": "FENG Hao",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string
@@ -132,7 +132,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
     # 'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
-    'ALLOWED_VERSIONS': ['v1', 'v2'],
+    'ALLOWED_VERSIONS': ['v1'],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
         'rest_framework.parsers.FormParser',
@@ -168,28 +168,6 @@ SPECTACULAR_SETTINGS = {
         'docExpansion': 'none',
     },
     'SORT_OPERATION_PARAMETERS': False
-}
-
-
-# REST FRAMEWORK
-# ------------------------------------------------------------------------------
-REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'core.drf_spectacular_schema.CustomAutoSchema',
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
-    ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'core.authentication_class.BearerAuthentication',
-        'core.authentication_class.TokenAuthentication'
-    ],
-    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
-    'ALLOWED_VERSIONS': ['v1', 'v2'],
-    'DEFAULT_PARSER_CLASSES': [
-        'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser',
-    ],
-    'COERCE_DECIMAL_TO_STRING': False,
 }
 
 
