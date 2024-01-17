@@ -26,7 +26,11 @@ logger = logging.getLogger(__name__)
 def index(request):
     if request.user.is_authenticated:
         verions = settings.REST_FRAMEWORK['ALLOWED_VERSIONS']
-        return render(request, 'home.html', {'verions': verions})
+        hrefs = []
+        for verion in verions:
+            href = {"version": verion, "swagger": f"{verion}:swagger-ui", "redoc": f"{verion}:redoc"}
+            hrefs.append(href)
+        return render(request, 'home.html', {'hrefs': hrefs})
     else:
         return http.HttpResponseRedirect(reverse('account_login'))
 

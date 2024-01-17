@@ -4,14 +4,14 @@
 
 {% block title %} Home {% endblock title %}
 
-{% block content %}
+{% block main_content %}
 
 <div class="row">
 	<ul>
-		{% for item in verions %}
-		<li><a href="api/{{ item }}/schema/swagger-ui/">Swagger UI ({{ item }})</a></li>
+		{% for href in hrefs %}
+		<li><a href="{% url href.swagger %}">Swagger UI</a> ({{ href.version }}) [<a href="{% url href.redoc %}">Redoc</a>]</li>
 		{% endfor %}
 	</ul>
 </div>
 
-{% endblock content %}
+{% endblock main_content %}
